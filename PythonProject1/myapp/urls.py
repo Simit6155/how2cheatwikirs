@@ -7,5 +7,7 @@ urlpatterns = [
     path('login/', login_view, name='login'),
     path('register/', register_view, name='register'),
     path('index/', index, name='index'),
+    path('roblox/', roblox_view, name='roblox'),
     path('admin/', admin.site.urls),
 ]
+
