@@ -1,6 +1,14 @@
 from django.contrib import admin
 from django.urls import path
-from myapp.views import login_view, index, register_view, home_view, roblox_view, minecraft_view, offline_view
+from myapp.views import (
+    login_view,
+    index,
+    register_view,
+    home_view,
+    roblox_view,
+    minecraft_view,
+    offline_view
+)
 
 urlpatterns = [
     path('', home_view, name='home'),
