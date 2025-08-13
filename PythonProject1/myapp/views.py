@@ -19,9 +19,11 @@ def login_view(request):
 
     return render(request, 'myapp/login.html')
 
+
 @login_required
 def index(request):
     return render(request, 'myapp/index.html', {'user': request.user})
+
 
 def register_view(request):
     if request.method == 'POST':
@@ -41,7 +43,22 @@ def register_view(request):
 
     return render(request, 'myapp/register.html')
 
+
 def home_view(request):
     if request.user.is_authenticated:
         return redirect('index')
     return redirect('login')
+
+
+@login_required
+def roblox_view(request):
+    return render(request, 'myapp/roblox.html')
+
+
+@login_required
+def minecraft_view(request):
+    return render(request, 'myapp/minecraft.html')
+
+
+def offline_view(request):
+    return render(request, 'myapp/offline.html')
