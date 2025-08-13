@@ -1,29 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
 </head>
-<body style="background-color:black;">
-    <div style="background-color:white; text-align:center; font-size:50px">Log in</div>
-    <br>
-    <br>
-    <form action="{%url 'login' %}" method="POST" style="background-color:white; text-align:center; font-size:30px;">
-        {% csrf_token %}
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="please enter username" minlength="6" maxlength="18" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="please enter password" minlength="6" maxlength="18" required><br>
+<body style="
+  background-image: url('image/abstract-geometric-computer-wallpaper-white-border-connecting-dots-digital-technology-vector-design.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
 
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
 
-        <input type="submit">
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+">
+
+  <div style="
+    border: 3px solid rgb(4, 72, 99);
+    padding: 10px;
+    height: 410px;
+    width: 600px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(4, 72, 99, 0.6);
+    box-sizing: border-box;
+  ">
+    <div style="color:aquamarine; text-align:center; font-size:90px; text-shadow: 0 0 10px rgba(134, 219, 253, 0.6);">Log in</div>
+    <br />
+    <br>
+    <form action="{%url 'login' %}" method="POST" style="color:aqua; text-align:center; font-size:50px;">
+      {% csrf_token %}
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Please enter a username" minlength="6" maxlength="18" required>
+      <br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Please enter a password" minlength="6" maxlength="18" required>
+      <br />
+      <input type="submit" style="font-size: 30px; color:aqua; background-color: rgba(14, 14, 14, 0.137); border-radius: 10px;"/>
     </form>
-    <br>
-    <div style="background-color: white; text-align: center; font-size:20px">
-        <a href="{% url 'register' %}">Dont have an Account? register here</a>
+    <br />
+    <div style="color: purple; text-align: center;">
+      <a href="register.html">  
+        <button style="background-color: rgba(14, 14, 14, 0.137); font-size: 25px; color: aqua;">
+            <a href="{% url 'register' %}">Dont have an account? Make one here</a>
+        </button>
+      </a>
     </div>
-
+  </div>
 </body>
 </html>
