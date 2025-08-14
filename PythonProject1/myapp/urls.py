@@ -15,11 +15,8 @@ urlpatterns = [
     path('login/', login_view, name='login'),
     path('register/', register_view, name='register'),
     path('index/', index, name='index'),
-    path('/index/roblox/', roblox_view, name='roblox'),
-    path('/index/minecraft/', minecraft_view, name='minecraft'),
-    path('/index/offline/', offline_view, name='offline'),
+    path('index/roblox/', roblox_view, name='roblox'),
+    path('index/minecraft/', minecraft_view, name='minecraft'),
+    path('index/offline/', offline_view, name='offline'),
     path('admin/', admin.site.urls),
 ]
-
-
-
